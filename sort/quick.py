@@ -4,6 +4,12 @@ n = 10
 data = [int(random() * 100) for x in range(0, n)]
 print data
 
+
+#wikipedia supply this!
+def qsort(L):
+    if not L: return []
+    return qsort([x for x in L[1:] if x< L[0]])  + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])
+
 def quick_sort(A, p, r):
     if p < r:
         q = part(A, p, r)
